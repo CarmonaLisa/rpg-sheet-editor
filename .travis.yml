@@ -15,7 +15,6 @@ addons:
 
 before_install:
   - npm install -g npm@latest
-  - sonar-scanner
 
 install:
   - npm install
@@ -23,6 +22,7 @@ install:
 script:
   - ng lint
   - ng build --prod --aot --buildOptimizer
+  - sonar-scanner
 
 git:
   depth: 1
