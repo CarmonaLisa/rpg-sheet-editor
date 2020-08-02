@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "rpg-sheet-editor",
+      "public": "dist/rpg-sheet-editor",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}

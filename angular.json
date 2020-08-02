@@ -122,8 +122,13 @@
               "devServerTarget": "rpg-sheet-editor:serve:production"
             }
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {}
         }
       }
-    }},
+    }
+  },
   "defaultProject": "rpg-sheet-editor"
 }

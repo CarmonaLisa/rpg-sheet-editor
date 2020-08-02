@@ -24,5 +24,11 @@ script:
   - ng build --prod --aot --buildOptimizer
   - sonar-scanner
 
+deploy:
+  provider: firebase
+  token:
+    secure: "SEE3tAMgAwXaZcCcG9LTzzEVjR2I19CnzKL0CPm/wsP1nbLaNURm5SRCh/zGXUROyEy1pUaQXl/+K51km8jWZwQaDjIxpJoX8/cBXE9bIAtyVxFhMzNN8Hj/UVRks1M+pJNfCAC9I7fPs9sIWYSdpJweTVE4NmaHgCivFXOxPqAo0/QZfEC5ABARnfL9jlZBjoc4b0pgtSW8a+rj3o2Y7sx5W0evAc7XyA8Y/lhQKLnF9/TQnv6o4ogAG45RLciG1Gw5V6PoYlFJ3L4jBq0AtzUC2qWfmIS29jaoHxcQXTC7xQZ1AtBfJdAAqwv0zbEqirD8y2pw2Hhleij8Ny7uS8JD6/8M+VpQX5aq4v4qpVm6+WbY+UNhDFR/wEXhzQQvAQlDNwjO2PS5Kf1DIf8ggE3uaicGWuXXXdqFw8645TWFfnAg1kPF9aGsjrP8r48+f3ifRGG7L31ZjffT/Cb/R8jeVgQexaINmMiLZXdeLjjut/4EnBvAGPxKlXa+9fHyCMaYWefi5FlA+RKDDgElEdpdzMEPz0BOd8h43R36ojMxQhrz9Vh5WynGEQB6qexUj1181GchvhCL1H1ja6WdftDf2ml07hz4esNHwsG2cjB6bOtBAAYI5NkYwlNuq3e/lT4RJxFxRURz7R0WWT5DliJWY6ndFwRD2Aoh+gRB/AU="
+  skip_cleanup: true
+
 git:
   depth: 1

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "rpg-sheet-editor": {
+      "hosting": {
+        "rpg-sheet-editor": [
+          "rpg-sheet-editor"
+        ]
+      }
+    }
+  }
+}
