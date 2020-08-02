@@ -7,6 +7,12 @@ dist: trusty
 node_js:
   - "10"
 
+addons:
+  sonarcloud:
+    organization: "carmonalisa"
+    token:
+      secure: "d52gjqChoFkzSGb8khMveuNTowt217Q6JUdn6yLOcQM52tcnhQo652oeVmTsJiCUwphDuAXpE6dIhKhCEfAbrot4XU2vVQGkmFpWDUfV2IGJt4MeU5FhOqA+EwAWvbIEb41rb62AMJbg+ciISUZ+xehgEAAFlBBBwxCyrcau7TnF2fLrLaEMF/7S+kVu+mxIlRT0MandEAeV2Uk/VljvX2CfSNGt4NR0obMKn/S8D8QcMOhjub6v2IYMEsFeY4audYQORZ3YsyHbIIyaoyfMFxvsgchyg/1JuBRbQRRM5Bh9AbNEnkTbOaOSEpYv1xxbCPAqEbO35LOSE6HUloAEO8Ls8mYnGjyYkXEPPpBkJFvDQ9sVYo1Z3YRPGGgfRZjWS+/e6YsI8scXrRvu8W6+3HmgWeKZvNKPg7U6BmsWnth7nECUR9DfJ1EG1UMPfmWRZOQvADfTe2xC3EgGGk77Qis3vt4gZWtU+7JtS+7A99UbFTaJLgfveBlbq4zGCfMebFYjNA41aUSkI6pYhZt3GycAd9Eqtu4+nqppKYB0j3nWcPjdrjMC8500U6ASjFtdZSpifWDQnp0CeRnblQXuWrxh2lDUHRMv8xfMZkouS7EyuAjaOqWb8TW8YElDdBY2XLZlZb91pbA67L4+Klz2ho2xGYBq6WfW5MliNXecjpg="
+
 before_install:
   - npm install -g npm@latest
 
