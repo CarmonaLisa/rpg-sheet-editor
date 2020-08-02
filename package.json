@@ -1,6 +1,12 @@
 {
   "name": "rpg-sheet-editor",
   "version": "0.0.0",
+  "homepage": "https://github.com/CarmonaLisa/rpg-sheet-editor",
+  "license": "Creative Commons BY NC ND",
+  "author": {
+    "name": "Lisa Carmona",
+    "email": "carmona.lisa52@gmail.com"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
