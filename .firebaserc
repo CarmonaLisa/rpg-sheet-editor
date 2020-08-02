@@ -1,4 +1,7 @@
 {
+  "projects": {
+    "default": "rpg-sheet-editor"
+  },
   "targets": {
     "rpg-sheet-editor": {
       "hosting": {
