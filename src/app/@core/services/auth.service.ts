@@ -7,7 +7,8 @@ import { Observable, of } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 
 export enum AppUserRole {
-  guest = 'guest',
+  player = 'player',
+  gm = 'gm',
   admin = 'admin'
 }
 
@@ -42,7 +43,7 @@ export class AuthService {
     this.afs.doc(`users/${user.uid}`).get().subscribe((document) => {
       if (!document.exists) {
         this.afs.doc(`users/${user.uid}`).set({
-          roles: [AppUserRole.guest],
+          roles: [AppUserRole.player],
           displayName: user.displayName,
           email: user.email,
           phoneNumber: user.phoneNumber,
