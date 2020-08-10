@@ -11,12 +11,12 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
 
   constructor(private auth: AuthService, private router: Router) { }
 
-  isAuthenticated(notAuthenticathed: boolean = false): Observable<boolean> {
+  isAuthenticated(notAuthenticathed: boolean = false, redirecting: Array<string> = ['/']): Observable<boolean> {
     return this.auth.isAuthenticathed().pipe(
       map(auth => notAuthenticathed !== auth),
       tap(auth => {
         if (!auth) {
-          this.router.navigate(['/']);
+          this.router.navigate(redirecting);
         }
       })
     );
@@ -26,14 +26,16 @@ export class AuthGuard implements CanActivate, CanActivateChild, CanLoad {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const notAuthenticathed: boolean = next?.data?.notAuthenticathed;
-    return this.isAuthenticated(notAuthenticathed);
+    const redirecting: Array<string> = next?.data?.redirecting ? next.data.redirecting : ['/'];
+    return this.isAuthenticated(notAuthenticathed, redirecting);
   }
 
   canActivateChild(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean | UrlTree {
     const notAuthenticathed: boolean = next?.data?.notAuthenticathed;
-    return this.isAuthenticated(notAuthenticathed);
+    const redirecting: Array<string> = next?.data?.redirecting ? next.data.redirecting : ['/'];
+    return this.isAuthenticated(notAuthenticathed, redirecting);
   }
 
   canLoad(
